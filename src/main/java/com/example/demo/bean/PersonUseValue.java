@@ -4,22 +4,21 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-import javax.validation.constraints.Email;
-
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-import org.springframework.validation.annotation.Validated;
 
 //@ConfigurationProperties告訴SpringBoot，本類的所有屬性都是配置文件的屬性
 //prefix抓取配置文件中哪個屬性進行Mapping
 //@Component-必須為容器中的組件才能使用容器的功能
 @Component
-@ConfigurationProperties(prefix="person")
-@Validated//JSR303驗證
-public class Person {
-	//@Email//JSR303驗證
+//@ConfigurationProperties(prefix="person")
+//練習使用@Value取得配置文件值
+public class PersonUseValue {
+	@Value("${person.lastName}")//從環境變量取值
 	private String lastName;
+	@Value("#{11*2}")//SpEl-Spring表達式
 	private Integer age;
+	@Value("true")
 	private Boolean boss;
 	private Date birth;
 	private Map<String,Object> maps;
@@ -28,7 +27,7 @@ public class Person {
 	
 	@Override
 	public String toString() {
-		return "Person [lastName=" + lastName + ", age=" + age + ", boss=" + boss + ", birth=" + birth + ", maps="
+		return "PersonUseValue [lastName=" + lastName + ", age=" + age + ", boss=" + boss + ", birth=" + birth + ", maps="
 				+ maps + ", lists=" + lists + ", dog=" + dog + "]";
 	}
 	

@@ -1,13 +1,13 @@
-person:
-  lastName: ANDY
-  age: 18
-  boss: false
-  birth: 2017/12/12
-  maps: {k1: v1, k2: 12}
-  lists:
-   - Henry
-   - Donna
-  dog:
-    name: Lucy
-    age: 12
+#person:
+#  lastName: ANDY
+#  age: 18
+#  boss: false
+#  birth: 2017/12/12
+#  maps: {k1: v1, k2: 12}
+#  lists:
+#   - Henry
+#   - Donna
+#  dog:
+#    name: Lucy
+#    age: 12
   
