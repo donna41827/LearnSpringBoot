@@ -11,6 +11,7 @@ import com.example.demo.bean.PersonUseValue;
 /*
  * 這是SpringBoot的單元測試(@SpringBootTest)
 */
+import com.example.demo.bean.psPerson;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -18,13 +19,18 @@ class HelloSpringBootApplicationTests {
 	
 	@Autowired//自動綁定
 	Person person;
+	
 	@Autowired//自動綁定
 	PersonUseValue person2;
+
+	@Autowired//自動綁定
+	psPerson person3;
 
 	@Test
 	void contextLoads() {
 		System.out.println("使用@ConfigurationPropertie取值:"+person);
 		System.out.println("使用@Value取值:"+person2);
+		System.out.println("使用@PropertySource取特定配置文件值:"+person3);
 	}
 
 }
