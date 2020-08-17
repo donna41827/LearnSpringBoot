@@ -10,4 +10,27 @@
 #  dog:
 #    name: Lucy
 #    age: 12
+spring:  profiles:    active: testYml1
+---
+
+spring:  profiles:  testYml1
   
+server:  port: 8077
+  
+---
+
+spring:
+  profiles:  testYml2
+
+server:
+  port: 8078
+  
+---
+
+spring:
+  profiles:  testYml3
+  
+server:
+  port: 8079
+  
+ 
