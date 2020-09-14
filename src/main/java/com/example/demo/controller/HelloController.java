@@ -16,4 +16,9 @@ public class HelloController {
 	public String hello() {
 		return "Hello World!" + name;
 	}
+	
+	@RequestMapping("/thytest")//呼叫的URL
+	public String thytest() {
+		return "thytest";
+	}
 }
